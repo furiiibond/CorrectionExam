@@ -1,7 +1,7 @@
 public class Pomme {
-    String color;
-    int size;
-    int weight;
+    private String color;
+    private int size;
+    private int weight;
 
     public Pomme(String color, int size, int weight) {
         this.color = color;
@@ -31,5 +31,14 @@ public class Pomme {
 
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    @Override
+    public String toString() {
+        return "Pomme{" +
+                "color='" + color + '\'' +
+                ", size=" + size +
+                ", weight=" + weight +
+                '}';
     }
 }
