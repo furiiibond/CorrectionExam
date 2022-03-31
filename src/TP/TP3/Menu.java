@@ -7,7 +7,7 @@ public class Menu {
     int prix; // en cents
 
 
-    public Menu(int prix, Entree e, PlatPrincipal p, Dessert d, Boisson b){
+    public Menu(int prix, Entree e, PlatPrincipal p, Dessert d, Boisson b) throws Exception {
         //TODO : completer (question3 + question 5)
         this.prix = prix;
         items = new ArrayList<>();
@@ -17,7 +17,7 @@ public class Menu {
         items.add(b);
 
         if (!verifPrixMenu())
-            System.out.println("ERREUR => PRIX DU MENU INCORRECT");
+            throw new Exception("Erreur: prix du menu incorrect");
 
     }
 
@@ -36,7 +36,7 @@ public class Menu {
             message.append(", ");
         }
         message.append("au prix de ");
-        message.append(prix);
+        message.append(Math.round((prix / 100f)));
         message.append(" euros");
         return message.toString();
     }

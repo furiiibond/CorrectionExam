@@ -10,11 +10,6 @@ public class TestIterator {
         listeFruits.add("Pomme");
         listeFruits.add("Bannane");
         listeFruits.add("Poire");
-        List<? extends String> listeFruits2 = listeFruits;
-        for (String fruit:
-             listeFruits2) {
-            System.out.println(fruit);
-        }
         Iterator<String> it = listeFruits.iterator();
         while (it.hasNext()){
             System.out.println(it.next());

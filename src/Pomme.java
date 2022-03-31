@@ -2,6 +2,7 @@ public class Pomme {
     private String color;
     private int size;
     private int weight;
+    public static final int tailleMax = 10;
 
     public Pomme(String color, int size, int weight) {
         this.color = color;
@@ -40,5 +41,9 @@ public class Pomme {
                 ", size=" + size +
                 ", weight=" + weight +
                 '}';
+    }
+
+    public boolean equals(Pomme obj) {
+        return this.color.equals(obj.getColor());
     }
 }

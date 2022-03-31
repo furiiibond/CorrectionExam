@@ -14,7 +14,19 @@ public class Commande {
     }
 	
     public ArrayList<Consommable> getItemsCommandés(){
-	return this.itemsCommandes;
+	    return this.itemsCommandes;
     }
 
+    //impression de la commande
+
+    @Override
+    public String toString() {
+       StringBuilder message = new StringBuilder("Votre commande :\n");
+        for (Consommable item : itemsCommandes){
+            message.append(item.getNom());
+            message.append(", ");
+        }
+
+        return message.toString();
+    }
 }
