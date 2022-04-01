@@ -1,6 +1,6 @@
 package TP.TP3;
 
-public class Boisson implements Consommable {
+public class Boisson implements Consommable, Nutrition {
 
     private int volume; // en centilitres
     private String nom;
@@ -12,8 +12,9 @@ public class Boisson implements Consommable {
         this.prix = prix;
     }
 
+    // eau gratuite donc valeur nutritionnelle nulle
     public Boisson(String nom, int volume){
-        this(nom, 0, volume);
+        this(nom, 0, volume, 0, 0);
     }
 
     public int getVolume(){
@@ -28,5 +29,15 @@ public class Boisson implements Consommable {
     @Override
     public int getPrix() {
         return prix;
+    }
+
+    @Override
+    public int getKcal()  {
+        return kcal;
+    }
+
+    @Override
+    public float getGlucides() {
+        return glucide;
     }
 }

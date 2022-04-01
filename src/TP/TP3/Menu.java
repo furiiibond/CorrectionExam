@@ -50,4 +50,14 @@ public class Menu {
         }
         return (this.prix <= price && this.prix > 0);
     }
+
+    // Retourne la somme des calories de tous les consommables du menu
+    public int totalKCal() {
+        int totalKloCal = 0;
+        for (Consommable item : items) {
+            Nutrition itemN = (Nutrition) item;
+            totalKloCal += itemN.getKcal();
+        }
+        return totalKloCal;
+    }
 }

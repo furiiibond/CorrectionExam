@@ -7,11 +7,11 @@ public class TestRestaurant {
     
     public static void main(String args[]){
         System.out.println("-----------Version 1 de l’application-----------");
-        Consommable boisson = new Boisson("Coca cola", 500, 1);
-        Entree entree = new Entree("Salade", 1000);
-        Entree entreeCharcutrie = new Entree("Charcutrie", 1100);
-        PlatPrincipal platPrincipal = new PlatPrincipal("Poulet", 1500);
-        Dessert dessert = new Dessert("Pomme golden", 200);
+        Consommable boisson = new Boisson("Coca cola", 500, 1, 1,3);
+        Entree entree = new Entree("Salade", 1000, 0, 0);
+        Entree entreeCharcutrie = new Entree("Charcutrie", 1100, 1, 0.2f);
+        PlatPrincipal platPrincipal = new PlatPrincipal("Poulet", 1500, 1, 30.3f);
+        Dessert dessert = new Dessert("Pomme golden", 200, 0, 11);
         System.out.println("-----------Test de menu Correct-----------");
         Menu menu = null;
         try {

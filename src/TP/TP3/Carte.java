@@ -135,4 +135,16 @@ public class Carte {
         System.out.println("Liste des desserts: " + listToString(desserts));
         System.out.println("Liste des boissons: " + listToString(boissons));
     }
+
+    public void proposerMenu(int Kc, int epsilon){
+        int borneSup =  Kc + epsilon;
+        int borneInf =  Kc - epsilon;
+        System.out.println("Les menus compris entre " + borneInf + " et " + borneSup + " Kilos calories sont :");
+        for (Menu menu : menus) {
+            int totalKcal = menu.totalKCal();
+            if (totalKcal >= borneInf && totalKcal <= borneSup)
+                System.out.println(menu);
+                System.out.println("===============");
+        }
+    }
 }
