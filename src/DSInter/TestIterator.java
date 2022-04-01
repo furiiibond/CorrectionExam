@@ -1,5 +1,7 @@
 package DSInter;
 
+import TP.TP3.Commande;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

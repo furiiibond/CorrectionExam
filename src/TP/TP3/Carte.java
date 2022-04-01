@@ -1,6 +1,7 @@
 package TP.TP3;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Carte {
@@ -69,9 +70,9 @@ public class Carte {
 
         for (Consommable consommable: consommablesListe) {
             if (consommable.getNom().equals(nomItem))
-                return true;
+                return false;
         }
-        return false;
+        return true;
     }
 
     // Vérifie que les plats et boissons du menu sont bien dans la carte
