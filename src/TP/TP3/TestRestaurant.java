@@ -40,14 +40,17 @@ public class TestRestaurant {
         commande.addItem(entreeCharcutrie);
 
         carte.printCommande(commande);
-        System.out.println("-----------Test de menu InCorrect-----------");
-        /*try {
+
+        /*System.out.println("-----------Test de menu InCorrect-----------");
+        try {
             menu = new Menu(3300, entree, platPrincipal, dessert, (Boisson) boisson);  // menu
             System.out.println(menu);
         } catch (Exception e) {
             e.printStackTrace();
         }*/
         System.out.println("-----------V2 La diététique-----------");
+        System.out.println("Nombre de calorie totales du menu1 : " + menu.totalKCal() + "kcal");
+        carte.proposerMenu(3, 1);
     }
     
 }
