@@ -85,7 +85,6 @@ public class Carte {
         return true;
     }
 
-
     /* Calcule le prix de la commande. A priori, ce prix est la somme des prix des items
      * SAUF si une partie de ces items constituent un menu; dans ce cas, le tarif menu s'applique pour ces items.
      */
@@ -117,13 +116,23 @@ public class Carte {
     }
 
     public void printCommande(Commande commande){
-        System.out.println(commande.toString() + calculerPrixCommande(commande));
+        System.out.println(commande.toString() + " au prix de " + Math.round((calculerPrixCommande(commande) / 100f)) + " euros.");
+    }
+
+    private String listToString(List<Consommable> consommables){
+        StringBuilder res = new StringBuilder();
+        res.append("| ");
+        for (Consommable consommable : consommables) {
+            res.append(consommable.getNom());
+            res.append(" | ");
+        }
+        return res.toString();
     }
 
     public void afficherMenu(){
-        System.out.println("Liste des entrees:" + entrees);
-        System.out.println("Liste des plats principaux:" + platsPrincipaux);
-        System.out.println("Liste des desserts:" + desserts);
-        System.out.println("Liste des boissons:" + boissons);
+        System.out.println("Liste des entrees: " + listToString(entrees));
+        System.out.println("Liste des plats principaux: " + listToString(platsPrincipaux));
+        System.out.println("Liste des desserts: " + listToString(desserts));
+        System.out.println("Liste des boissons: " + listToString(boissons));
     }
 }
