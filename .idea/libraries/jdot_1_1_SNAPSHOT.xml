@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jdot-1.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/TP/TP4/V3/jdot-master/target/jdot-1.1-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
